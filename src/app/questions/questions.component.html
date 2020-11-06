@@ -1,0 +1,45 @@
+
+<div>
+    <input type="button" value="Start Quiz"
+    (click)="loadQuestion()"/>
+    <hr>
+</div>
+<div class="quiz-card" *ngIf="!isFinished">
+    <mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Q{{currentQues + 1 }}. {{questions[currentQues].questionDetail}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="card-content">
+            <mat-radio-group class="ques-radio-group" [(ngModel)]="currentAns">
+                <mat-radio-button class="ques-radio-button" *ngFor="let option of questions[currentQues].options" [value]="option">{{option}}</mat-radio-button>
+            </mat-radio-group>
+            <div *ngIf="questions[currentQues].answered">
+                <mat-divider></mat-divider>
+                <h3 class="correct" *ngIf="questions[currentQues].correctAnswer == currentAns">Correct Answer</h3>
+                <div *ngIf="questions[currentQues].correctAnswer != currentAns">
+                    <h3 class="incorrect">Incorrect Answer</h3>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+        <mat-divider></mat-divider>
+            <mat-card-actions>
+                <button mat-button *ngIf="questions[currentQues].isAnswered" color="primary" (click)="nextQuestion()">Next Question</button>
+                <button mat-button color="primary" (click)="submitAnswer()">Submit</button>
+            </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="quiz-card" *ngIf="isFinished">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Quiz Ended</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+            <p>Your Score is: <strong>{{ count }}/{{ questions.length }}</strong></p>
+        </mat-card-content>
+    </mat-card>
+</div>

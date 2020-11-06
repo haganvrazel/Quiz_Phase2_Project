@@ -1,0 +1,29 @@
+{
+  "question": [
+    {   
+      "questionDetail": "What is the capital of Texas?",
+      "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+      "correctAnswer": "Austin"
+    },
+    {
+      "questionDetail": "What is the voting age in the US?",
+      "options": ["18", "20", "21", "16"],
+      "correctAnswer": "18"
+    },
+    {
+      "questionDetail": "Who was third president of the United States?",
+      "options": ["Abraham Lincoln", "Joe Biden", "George Washington", "Thomas Jefferson"],
+      "correctAnswer": "Thomas Jefferson"
+    },
+    {
+      "questionDetail": "What is 1 + 1 + 1 + 1 * 0?",
+      "options": ["0", "3", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "questionDetail": "What is the 6th planet from the sun?",
+      "options": ["Jupiter", "Pluto", "Saturn", "Venus"],
+      "correctAnswer": "Saturn"
+    }
+  ]
+}

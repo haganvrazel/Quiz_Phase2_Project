@@ -1,0 +1,27 @@
+.quiz-card {
+    margin: 0 auto;
+    max-width: 40em;
+}
+
+.card-content {
+    padding: 1em;
+}
+
+.ques-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.ques-radio-button {
+    margin: 5px;
+}
+
+.correct {
+    color: purple;
+    padding-top: 1em;
+}
+
+.incorrect {
+    color: darkslategrey;
+    padding-top: 1em;
+}
